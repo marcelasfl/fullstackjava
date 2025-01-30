@@ -1,0 +1,70 @@
+### Criar Subestação
+POST http://localhost:8080/api/subestacoes
+Content-Type: application/json
+
+{
+  "codigo": "001",
+  "nome": "Subestação Central",
+  "latitude": 12.3456789012345,
+  "longitude": 98.7654321098765
+}
+
+### Obter todas as Subestações
+GET http://localhost:8080/api/subestacoes
+
+### Obter Subestação por ID
+GET http://localhost:8080/api/subestacoes/1
+
+### Atualizar Subestação
+PUT http://localhost:8080/api/subestacoes/1
+Content-Type: application/json
+
+{
+  "codigo": "001",
+  "nome": "Subestação Nova",
+  "latitude": 12.3456789012345,
+  "longitude": 98.7654321098765
+}
+
+### Deletar Subestação
+DELETE http://localhost:8080/api/subestacoes/1
+
+
+
+
+
+### Criar Rede MT
+POST http://localhost:8080/api/redesmt
+Content-Type: application/json
+
+{
+  "codigo": "REDE001",
+  "nome": "Rede MT Principal",
+  "tensaoNominal": 13.8,
+  "subestacao": {
+    "idSubestacao": 1
+  }
+}
+
+### Obter todas as Redes MT
+GET http://localhost:8080/api/redesmt
+
+### Obter Rede MT por ID
+GET http://localhost:8080/api/redesmt/1
+
+### Atualizar Rede MT
+PUT http://localhost:8080/api/redesmt/1
+Content-Type: application/json
+
+{
+  "codigo": "REDE001",
+  "nome": "Rede MT Atualizada",
+  "tensaoNominal": 13.8,
+  "subestacao": {
+    "id": 1
+  }
+}
+
+### Deletar Rede MT
+DELETE http://localhost:8080/api/redesmt/1
+
